@@ -1,0 +1,13 @@
+{
+  "folders": [
+    {
+      "name": "React",
+      "path": "../src/fable/apps/react/mariokart"
+    },
+    {
+      "name": "RepoRoot",
+      "path": ".."
+    },
+  ],
+  "settings": {}
+}

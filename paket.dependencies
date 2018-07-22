@@ -1,0 +1,40 @@
+# Dependencies used for build process
+group build
+  source https://api.nuget.org/v3/index.json
+
+  nuget FAKE ~> 5
+  github fsharp/FAKE modules/Octokit/Octokit.fsx
+
+# Dependencies used when compiling and linking against .NETStandard
+group netstandard
+  source https://api.nuget.org/v3/index.json 
+  redirects:force
+  framework: netstandard2.0
+  
+  nuget FSharp.Core ~> 4	
+
+  nuget FParsec ~> 1
+  nuget FSharp.Data ~> 3 prerelease
+
+  github fsprojects/FSharp.Control.AsyncSeq src/FSharp.Control.AsyncSeq/AsyncSeq.fs
+  
+  github fsprojects/FSharpx.Async /src/FSharpx.Async/Agent.fs
+  github fsprojects/FSharpx.Async /src/FSharpx.Async/AutoCancelAgent.fs   
+  github fsprojects/FSharpx.Async /src/FSharpx.Async/Async.fs
+
+# Dependencies used when transpiling with Fable
+group fable
+  source https://api.nuget.org/v3/index.json 
+  redirects:force
+    
+  nuget FSharp.Core ~> 4
+  nuget FSharp.Data ~> 3 prerelease
+
+  nuget Fable.Elmish.Browser ~> 1
+  nuget Fable.Elmish.Debugger ~> 1
+  nuget Fable.Elmish.HMR ~> 1
+  nuget Fable.Elmish.React ~> 1
+  nuget Fable.Parsimmon ~> 2
+  nuget Fable.React.Native ~> 1
+
+  clitool dotnet-fable ~> 1

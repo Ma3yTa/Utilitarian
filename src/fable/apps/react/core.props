@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Shared project configuration for React JS web applications -->
+<Project>
+  <ItemGroup>
+    <Compile Include="../../../../shared/core/widgets/Interfaces.fs">
+      <Link>shared/core/widgets/Interfaces.fs</Link>
+    </Compile>
+    <Compile Include="../../../../shared/core/widgets/Combinators.fs">
+      <Link>shared/core/widgets/Combinators.fs</Link>
+    </Compile>
+    <Compile Include="../../../../shared/core/widgets/SeqFlowController.fs">
+      <Link>shared/core/widgets/SeqFlowController.fs</Link>
+    </Compile>
+</ItemGroup>
+</Project>

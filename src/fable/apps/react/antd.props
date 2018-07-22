@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Submodule inludes of AntD Fable bindings for React JS web apps -->
+<Project>
+  <ItemGroup>
+    <Compile Include="../../../libs/submodules/fable-ant-design/src/Fable.Ant.Design/Common.fs">
+      <Link>fable_import/antd/Common.fs</Link>
+    </Compile>
+    <Compile Include="../../../libs/submodules/fable-ant-design/src/Fable.Ant.Design/Button.fs">
+      <Link>fable_import/antd/Button.fs</Link>
+    </Compile>
+    <Compile Include="../../../libs/submodules/fable-ant-design/src/Fable.Ant.Design/Card.fs">
+      <Link>fable_import/antd/Card.fs</Link>
+    </Compile>
+    <Compile Include="../../../libs/submodules/fable-ant-design/src/Fable.Ant.Design/Affix.fs">
+      <Link>fable_import/antd/Affix.fs</Link>
+    </Compile>
+    <Compile Include="../../../libs/submodules/fable-ant-design/src/Fable.Ant.Design/Icon.fs">
+      <Link>fable_import/antd/Icon.fs</Link>
+    </Compile>
+    <Compile Include="../../../libs/submodules/fable-ant-design/src/Fable.Ant.Design/Input.fs">
+      <Link>fable_import/antd/Input.fs</Link>
+    </Compile>
+    <Compile Include="../../../libs/submodules/fable-ant-design/src/Fable.Ant.Design/InputNumber.fs">
+      <Link>fable_import/antd/InputNumber.fs</Link>
+    </Compile>
+    <Compile Include="../../../libs/submodules/fable-ant-design/src/Fable.Ant.Design/Grid.fs">
+      <Link>fable_import/antd/Grid.fs</Link>
+    </Compile>
+    <Compile Include="../../../libs/submodules/fable-ant-design/src/Fable.Ant.Design/List.fs">
+      <Link>fable_import/antd/List.fs</Link>
+    </Compile>
+    <Compile Include="../../../libs/submodules/fable-ant-design/src/Fable.Ant.Design/Pagination.fs">
+      <Link>fable_import/antd/Pagination.fs</Link>
+    </Compile>
+    <Compile Include="../../../libs/submodules/fable-ant-design/src/Fable.Ant.Design/Select.fs">
+      <Link>fable_import/antd/Select.fs</Link>
+    </Compile>
+    <Compile Include="../../../libs/submodules/fable-ant-design/src/Fable.Ant.Design/Form.fs">
+      <Link>fable_import/antd/Form.fs</Link>
+    </Compile>
+</ItemGroup>
+</Project>

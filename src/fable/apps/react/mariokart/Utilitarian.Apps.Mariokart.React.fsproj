@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="..\antd.props" Link="antd.props" />
+    <None Include="..\core.props" Link="core.props" />
+    <Content Include="app.config" />
+  </ItemGroup>
+  <Import Project="../antd.props" />
+  <Import Project="../core.props" />
+  <ItemGroup>
+    <Compile Include="Domain.fs" />
+    <Compile Include="Parsimmon.fs" />
+    <Compile Include="widgets/catalog/Counter.fs" />
+    <Compile Include="widgets/catalog/AttributeScoreFilter.fs" />
+    <Compile Include="widgets/AntD.fs" />
+    <Compile Include="App.fs" />
+  </ItemGroup>
+  <Import Project="..\..\..\..\..\.paket\Paket.Restore.targets" />
+</Project>

@@ -1,0 +1,4 @@
+group netstandard
+  FSharp.Core
+  FParsec
+  FSharp.Data

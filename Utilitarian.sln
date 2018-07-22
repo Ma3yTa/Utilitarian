@@ -1,0 +1,118 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2002
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".paket", ".paket", "{DE7EDE79-5AFB-4577-9944-E89FE74609CB}"
+	ProjectSection(SolutionItems) = preProject
+		paket.dependencies = paket.dependencies
+		paket.lock = paket.lock
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".git", ".git", "{B3D74413-4032-430C-AA4A-73DA4DC92E1A}"
+	ProjectSection(SolutionItems) = preProject
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		.gitmodules = .gitmodules
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".buildtime", ".buildtime", "{467A88CD-E07F-4855-AA02-EEF86A8AF0FF}"
+	ProjectSection(SolutionItems) = preProject
+		.buildtime\build.fsx = .buildtime\build.fsx
+		.buildtime\build_dotnet.fsx = .buildtime\build_dotnet.fsx
+		.buildtime\build_git.fsx = .buildtime\build_git.fsx
+		.buildtime\build_projectinfo.fsx = .buildtime\build_projectinfo.fsx
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "interactive", "interactive", "{45457B90-8673-4395-AB30-FA64C8DFFC07}"
+	ProjectSection(SolutionItems) = preProject
+		interactive\logging.fsx = interactive\logging.fsx
+		interactive\setup_fsi.fsx = interactive\setup_fsi.fsx
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "netstandard20", "netstandard20", "{72CB1DF9-3BB6-43BB-8608-67081EC5110E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".md", ".md", "{9B4BFBF3-A0ED-4828-B19D-1D5566120A8B}"
+	ProjectSection(SolutionItems) = preProject
+		CHANGELOG.md = CHANGELOG.md
+		CONTRIBUTING.md = CONTRIBUTING.md
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "references", "references", "{5FF76761-E1C8-47CC-A0E3-64A5D2410667}"
+	ProjectSection(SolutionItems) = preProject
+		src\fable\apps\react\mariokart\Utilitarian.Apps.Mariokart.React.fsproj.paket.references = src\fable\apps\react\mariokart\Utilitarian.Apps.Mariokart.React.fsproj.paket.references
+		src\netstandard\Utilitarian\Utilitarian.Netstandard.fsproj.paket.references = src\netstandard\Utilitarian\Utilitarian.Netstandard.fsproj.paket.references
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "apps", "apps", "{990B80AB-A33E-466F-AACC-41F22D845B4D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "libs", "libs", "{7C22A8A0-BB46-486E-8DC2-31965FC27B62}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "mariokart", "mariokart", "{82740A31-5A3C-4BDE-9D06-B6B3AC098C0B}"
+EndProject
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Utilitarian.Apps.Mariokart.React", "src\fable\apps\react\mariokart\Utilitarian.Apps.Mariokart.React.fsproj", "{1B132DF4-41CB-4A83-8538-E2DE2711BD90}"
+EndProject
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Utilitarian.Netstandard", "src\netstandard\Utilitarian\Utilitarian.Netstandard.fsproj", "{86C38E52-2806-43B6-B6F5-1035445C2016}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "fable", "fable", "{14ABFD24-DA9F-4769-B1E5-91ADAB0FD20D}"
+EndProject
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Fable.Ant.Design", "src\fable\libs\submodules\fable-ant-design\src\Fable.Ant.Design\Fable.Ant.Design.fsproj", "{7BB26C9E-301D-4F3B-8B40-5BE19899388B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".props", ".props", "{8393B69E-43EF-4EF6-B885-D902FDA54BEB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "apps", "apps", "{DB3E0C78-A980-44A4-A770-945A7A53CE15}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "react", "react", "{6EC3E629-B78D-44E0-96FE-D411FE6B65BE}"
+	ProjectSection(SolutionItems) = preProject
+		src\fable\apps\react\antd.props = src\fable\apps\react\antd.props
+		src\fable\apps\react\core.props = src\fable\apps\react\core.props
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "libs", "libs", "{A7123F3E-1BCF-4447-9AFA-44D5B7F200C2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "netstandard", "netstandard", "{42BBA88A-D2DC-4B12-ACBA-E3EBA23E09AE}"
+	ProjectSection(SolutionItems) = preProject
+		src\netstandard\core.props = src\netstandard\core.props
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1B132DF4-41CB-4A83-8538-E2DE2711BD90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B132DF4-41CB-4A83-8538-E2DE2711BD90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B132DF4-41CB-4A83-8538-E2DE2711BD90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B132DF4-41CB-4A83-8538-E2DE2711BD90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86C38E52-2806-43B6-B6F5-1035445C2016}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86C38E52-2806-43B6-B6F5-1035445C2016}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86C38E52-2806-43B6-B6F5-1035445C2016}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86C38E52-2806-43B6-B6F5-1035445C2016}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BB26C9E-301D-4F3B-8B40-5BE19899388B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BB26C9E-301D-4F3B-8B40-5BE19899388B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BB26C9E-301D-4F3B-8B40-5BE19899388B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BB26C9E-301D-4F3B-8B40-5BE19899388B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{72CB1DF9-3BB6-43BB-8608-67081EC5110E} = {7C22A8A0-BB46-486E-8DC2-31965FC27B62}
+		{5FF76761-E1C8-47CC-A0E3-64A5D2410667} = {DE7EDE79-5AFB-4577-9944-E89FE74609CB}
+		{82740A31-5A3C-4BDE-9D06-B6B3AC098C0B} = {990B80AB-A33E-466F-AACC-41F22D845B4D}
+		{1B132DF4-41CB-4A83-8538-E2DE2711BD90} = {82740A31-5A3C-4BDE-9D06-B6B3AC098C0B}
+		{86C38E52-2806-43B6-B6F5-1035445C2016} = {72CB1DF9-3BB6-43BB-8608-67081EC5110E}
+		{14ABFD24-DA9F-4769-B1E5-91ADAB0FD20D} = {7C22A8A0-BB46-486E-8DC2-31965FC27B62}
+		{7BB26C9E-301D-4F3B-8B40-5BE19899388B} = {14ABFD24-DA9F-4769-B1E5-91ADAB0FD20D}
+		{DB3E0C78-A980-44A4-A770-945A7A53CE15} = {8393B69E-43EF-4EF6-B885-D902FDA54BEB}
+		{6EC3E629-B78D-44E0-96FE-D411FE6B65BE} = {DB3E0C78-A980-44A4-A770-945A7A53CE15}
+		{A7123F3E-1BCF-4447-9AFA-44D5B7F200C2} = {8393B69E-43EF-4EF6-B885-D902FDA54BEB}
+		{42BBA88A-D2DC-4B12-ACBA-E3EBA23E09AE} = {A7123F3E-1BCF-4447-9AFA-44D5B7F200C2}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EAB6B21F-0FED-4C36-8A9A-10EB8C8E6C8A}
+	EndGlobalSection
+EndGlobal

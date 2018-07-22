@@ -1,0 +1,17 @@
+{
+  "folders": [
+    {
+      "name": "Shared",
+      "path": "../src/shared/core"
+    },
+    {
+      "name": "Netstandard",
+      "path": "../src/netstandard/Utilitarian"
+    },
+    {
+      "name": "RepoRoot",
+      "path": ".."
+    }
+  ],
+  "settings": {}
+}

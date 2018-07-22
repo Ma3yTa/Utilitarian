@@ -1,0 +1,3 @@
+[submodule "src/fable/libs/submodules/fable-ant-design"]
+	path = src/fable/libs/submodules/fable-ant-design
+	url = https://github.com/evilz/fable-ant-design

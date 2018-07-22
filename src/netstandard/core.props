@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <ItemGroup>
+    <Compile Include="../../shared/core/Prelude.fs">
+      <Link>shared/core/Prelude.fs</Link>
+    </Compile>
+    <Compile Include="../../shared/core/Logging.fs">
+      <Link>shared/core/Logging.fs</Link>
+    </Compile>  
+</ItemGroup>
+</Project>

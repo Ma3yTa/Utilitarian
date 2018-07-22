@@ -1,0 +1,7 @@
+group fable
+  FSharp.Core
+  Fable.Elmish.Debugger
+  Fable.Elmish.React
+  Fable.Elmish.HMR
+  dotnet-fable
+  Fable.Parsimmon
