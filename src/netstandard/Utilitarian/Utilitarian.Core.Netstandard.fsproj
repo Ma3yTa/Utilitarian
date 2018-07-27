@@ -3,6 +3,8 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <AssemblyName>Utilitarian.Core.Netstandard</AssemblyName>
+    <RootNamespace>Utilitarian.Core.Netstandard</RootNamespace>
   </PropertyGroup>
   <Import Project="../core.props" />
   <Import Project="..\..\..\.paket\Paket.Restore.targets" />

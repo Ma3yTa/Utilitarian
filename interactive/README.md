@@ -1,3 +1,7 @@
 # Interactive Coding
 
-In this folder live all your scripts. This is the place to get started with new features and explore concepts and ideas. Always make sure you have one file that properly sets up everything so you can just create a new `.fsx` and get started without any obstacles (see `setup_fsi.fsx`)
+This folder houses all [F# Interactive](https://docs.microsoft.com/en-us/dotnet/fsharp/tutorials/fsharp-interactive/) scripts.
+
+This is a good place to explore concepts and ideas and to do little experiments to learn about internals of structures and operations.
+
+There is a file `setup_fsi.fsx` that properly sets up all the boilerplate, so you can just create a new `.fsx` and get started without any obstacle.

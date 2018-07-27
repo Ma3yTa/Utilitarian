@@ -1,7 +1,7 @@
-  /// #### Idea
-  /// exploit fractality by combining with a undo flow controller to unset active mappings or filters.
+/// ### Idea
+/// exploit fractal by combining with a undo flow controller to unset active mappings or filters.
 [<RequireQualifiedAccess>]
-module Utilitarian.Widgets.SeqFlowController
+module Utilitarian.Widgets.FlowController.Seq
 
 open Elmish
 open Utilitarian.Widgets
@@ -21,12 +21,12 @@ let sortWith comparer = SortWith comparer
 let modelMapi fi = ModelMapi fi 
 let modelMap f = ModelMap f  
 
-type T<'TMsgProtocol,'TModel,'TRenderElement,'TKey> = 
+type FlowController<'TMsgProtocol,'TModel,'TRenderElement,'TKey> = 
   IWidget<'TModel seq, CtrlMsg<'TMsgProtocol, 'TModel, 'TKey>,'TModel seq,'TRenderElement seq>
 
-let fromWidgetGenerator
+let createFlowController
   (widgetGenerator : 'TModel -> IConfiguredWidget<'TMsgProtocol,'TModel,'TRenderElement>)
-  : T<'TMsgProtocol,'TModel,'TRenderElement,'TKey> =
+  : FlowController<'TMsgProtocol,'TModel,'TRenderElement,'TKey> =
 
   let init dataflow =
 
@@ -50,8 +50,8 @@ let fromWidgetGenerator
         |> Seq.mapi (fun j flowValue -> 
           if i = j then
             let updater = (widgetGenerator flowValue).Updater
-            let flowData', insts = updater msg flowValue
-            flowData', insts |> Cmd.map (dispatch i)
+            let flowValue', insts = updater msg flowValue
+            flowValue', insts |> Cmd.map (dispatch i)
           else
             flowValue,[])
 
@@ -73,11 +73,11 @@ let fromWidgetGenerator
     | ModelMap f -> 
         dataflow |> Seq.map f,[]
 
-  let render dataflow feedbackChannelT =
+  let render dataflow feedbackChannel =
     dataflow
     |> Seq.mapi (fun i flowValue ->
       let renderer = (widgetGenerator flowValue).Renderer
-      renderer flowValue ((dispatch i) >> feedbackChannelT))
+      renderer flowValue ((dispatch i) >> feedbackChannel))
 
   Widget.create init update render
   

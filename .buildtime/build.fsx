@@ -74,6 +74,9 @@ Target.create BuildMk8React (fun _ ->
 )
 
 InstallDotNetCore
+==> DevelopMk8React
+
+InstallDotNetCore
 ==> BuildMk8React
 
 //#endregion 

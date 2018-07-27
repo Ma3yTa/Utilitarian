@@ -22,23 +22,23 @@ type ScoreFilterModel = AttributeScoreFilter.T.Model
 
 let demoCounter = 
   Catalog.counter 
-  |> Widget.embedConfig CounterModel.Default
+  |> Widget.withEmbeddedConfig CounterModel.Default
 
 let demoScoreFilter = 
   Catalog.attributeFilter 
-  |> Widget.embedConfig ScoreFilterModel.Default
+  |> Widget.withEmbeddedConfig ScoreFilterModel.Default
 
 let demoCounterController = 
   let dataflow = seq {
     for _ in 0..5 do
     yield CounterModel.Default
   }
-  let widgetGenerator model = Catalog.counter |> Widget.embedConfig model
+  let widgetGenerator model = Catalog.counter |> Widget.withEmbeddedConfig model
   let sortByCount (data : CounterModel) = data.Count
   let filterHighCounts (data : CounterModel) = data.Count > 3.
   
-  Catalog.seqDataflowController widgetGenerator sortByCount filterHighCounts
-  |> Widget.embedConfig dataflow
+  Catalog.seqFlowController widgetGenerator sortByCount filterHighCounts
+  |> Widget.withEmbeddedConfig dataflow
 
 let demoScoreFilterController = 
   
@@ -47,12 +47,12 @@ let demoScoreFilterController =
     yield ScoreFilterModel.Default
   }
   
-  let widgetGenerator model = Catalog.attributeFilter |> Widget.embedConfig model
+  let widgetGenerator model = Catalog.attributeFilter |> Widget.withEmbeddedConfig model
   let sortByCount (data : ScoreFilterModel) = data.ThresholdCounter.Count
   let filterHighCounts (data : ScoreFilterModel) = data.ThresholdCounter.Count > 1.
   
-  Catalog.seqDataflowController widgetGenerator sortByCount filterHighCounts
-  |> Widget.embedConfig dataflow
+  Catalog.seqFlowController widgetGenerator sortByCount filterHighCounts
+  |> Widget.withEmbeddedConfig dataflow
 
 
 demoScoreFilterController

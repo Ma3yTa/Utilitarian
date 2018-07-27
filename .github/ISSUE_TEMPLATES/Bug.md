@@ -19,7 +19,7 @@
 (Paste any relevant logs - please use code blocks (```) to format console output,
 logs, and code as it's very hard to read otherwise)
 
-(upload a gif video if you want to be really effective (if applicable). [ScreenToGif](http://www.screentogif.com/) is a nice one for Windows)
+(upload a gif video that demonstrates bug behavior if you can. [ScreenToGif](http://www.screentogif.com/) is a nice one for Windows)
 
 ### Possible fixes
 

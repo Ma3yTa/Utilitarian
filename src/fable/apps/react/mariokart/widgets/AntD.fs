@@ -22,7 +22,6 @@ module private Renderers =
 
   open Fable.Core
   open Utilitarian.Mariokart
-  open Utilitarian.Mariokart.Widgets
   open Utilitarian.Fable.Parsimmon.Mariokart
   
   open Utilitarian.Mariokart.Widgets.Counter.T
@@ -132,6 +131,7 @@ module Catalog =
   open Utilitarian.Mariokart
 
   open Utilitarian.Widgets
+  open Utilitarian.Widgets.FlowController
   open Utilitarian.Mariokart.Widgets.Counter.DomainExtensions
   open Utilitarian.Mariokart.Widgets.AttributeScoreFilter.DomainExtensions
 
@@ -143,23 +143,23 @@ module Catalog =
     Attribute.ScoreFilterDarkWidget
     |> Widget.withRenderer Renderers.attributeScoreFilter
 
-  let seqDataflowController widgetGenerator sortProjection filterPredicate=
+  let seqFlowController widgetGenerator sortProjection filterPredicate=
     
-    SeqFlowController.fromWidgetGenerator widgetGenerator 
-    |> Widget.mapRenderedElement (fun flowPermutation _ fbChannel ->
+    Seq.createFlowController widgetGenerator 
+    |> Widget.withMappedRenderOutput (fun flowPermutation _ fbChannel ->
         
       let reportSortRequest _ =
-        SeqFlowController.sortBy sortProjection
+        Seq.sortBy sortProjection
         |> fbChannel
 
       let reportFilterRequest _ =
-        SeqFlowController.filter filterPredicate
+        Seq.filter filterPredicate
         |> fbChannel
 
       let btnSort = B.button [P.OnClick reportSortRequest] [R.str "Sort"]
       let btnFilter = B.button [P.OnClick reportFilterRequest] [R.str "Filter"]
 
-      R.div [P.Class "elmish-flow-controller-seq"] 
+      R.div [P.Class "flow-controller-seq"] 
         [
           btnSort
           btnFilter

@@ -1,12 +1,12 @@
 {
   "folders": [
     {
-      "name": "Shared",
-      "path": "../src/shared/core"
-    },
-    {
       "name": "Netstandard",
       "path": "../src/netstandard/Utilitarian"
+    },
+    {
+      "name": "SharedCode",
+      "path": "../src/shared/core"
     },
     {
       "name": "RepoRoot",

@@ -43,7 +43,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "references", "references", "{5FF76761-E1C8-47CC-A0E3-64A5D2410667}"
 	ProjectSection(SolutionItems) = preProject
 		src\fable\apps\react\mariokart\Utilitarian.Apps.Mariokart.React.fsproj.paket.references = src\fable\apps\react\mariokart\Utilitarian.Apps.Mariokart.React.fsproj.paket.references
-		src\netstandard\Utilitarian\Utilitarian.Netstandard.fsproj.paket.references = src\netstandard\Utilitarian\Utilitarian.Netstandard.fsproj.paket.references
+		src\netstandard\Utilitarian\Utilitarian.Core.Netstandard.fsproj.paket.references = src\netstandard\Utilitarian\Utilitarian.Core.Netstandard.fsproj.paket.references
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "apps", "apps", "{990B80AB-A33E-466F-AACC-41F22D845B4D}"
@@ -53,8 +53,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "mariokart", "mariokart", "{82740A31-5A3C-4BDE-9D06-B6B3AC098C0B}"
 EndProject
 Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Utilitarian.Apps.Mariokart.React", "src\fable\apps\react\mariokart\Utilitarian.Apps.Mariokart.React.fsproj", "{1B132DF4-41CB-4A83-8538-E2DE2711BD90}"
-EndProject
-Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Utilitarian.Netstandard", "src\netstandard\Utilitarian\Utilitarian.Netstandard.fsproj", "{86C38E52-2806-43B6-B6F5-1035445C2016}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "fable", "fable", "{14ABFD24-DA9F-4769-B1E5-91ADAB0FD20D}"
 EndProject
@@ -77,6 +75,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "netstandard", "netstandard"
 		src\netstandard\core.props = src\netstandard\core.props
 	EndProjectSection
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Utilitarian.Core.Netstandard", "src\netstandard\Utilitarian\Utilitarian.Core.Netstandard.fsproj", "{3CF41534-B2E1-4514-8119-90D6F1D62634}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,14 +87,14 @@ Global
 		{1B132DF4-41CB-4A83-8538-E2DE2711BD90}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B132DF4-41CB-4A83-8538-E2DE2711BD90}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1B132DF4-41CB-4A83-8538-E2DE2711BD90}.Release|Any CPU.Build.0 = Release|Any CPU
-		{86C38E52-2806-43B6-B6F5-1035445C2016}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{86C38E52-2806-43B6-B6F5-1035445C2016}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{86C38E52-2806-43B6-B6F5-1035445C2016}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{86C38E52-2806-43B6-B6F5-1035445C2016}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7BB26C9E-301D-4F3B-8B40-5BE19899388B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7BB26C9E-301D-4F3B-8B40-5BE19899388B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7BB26C9E-301D-4F3B-8B40-5BE19899388B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7BB26C9E-301D-4F3B-8B40-5BE19899388B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CF41534-B2E1-4514-8119-90D6F1D62634}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CF41534-B2E1-4514-8119-90D6F1D62634}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CF41534-B2E1-4514-8119-90D6F1D62634}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CF41534-B2E1-4514-8119-90D6F1D62634}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -104,13 +104,13 @@ Global
 		{5FF76761-E1C8-47CC-A0E3-64A5D2410667} = {DE7EDE79-5AFB-4577-9944-E89FE74609CB}
 		{82740A31-5A3C-4BDE-9D06-B6B3AC098C0B} = {990B80AB-A33E-466F-AACC-41F22D845B4D}
 		{1B132DF4-41CB-4A83-8538-E2DE2711BD90} = {82740A31-5A3C-4BDE-9D06-B6B3AC098C0B}
-		{86C38E52-2806-43B6-B6F5-1035445C2016} = {72CB1DF9-3BB6-43BB-8608-67081EC5110E}
 		{14ABFD24-DA9F-4769-B1E5-91ADAB0FD20D} = {7C22A8A0-BB46-486E-8DC2-31965FC27B62}
 		{7BB26C9E-301D-4F3B-8B40-5BE19899388B} = {14ABFD24-DA9F-4769-B1E5-91ADAB0FD20D}
 		{DB3E0C78-A980-44A4-A770-945A7A53CE15} = {8393B69E-43EF-4EF6-B885-D902FDA54BEB}
 		{6EC3E629-B78D-44E0-96FE-D411FE6B65BE} = {DB3E0C78-A980-44A4-A770-945A7A53CE15}
 		{A7123F3E-1BCF-4447-9AFA-44D5B7F200C2} = {8393B69E-43EF-4EF6-B885-D902FDA54BEB}
 		{42BBA88A-D2DC-4B12-ACBA-E3EBA23E09AE} = {A7123F3E-1BCF-4447-9AFA-44D5B7F200C2}
+		{3CF41534-B2E1-4514-8119-90D6F1D62634} = {72CB1DF9-3BB6-43BB-8608-67081EC5110E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EAB6B21F-0FED-4C36-8A9A-10EB8C8E6C8A}

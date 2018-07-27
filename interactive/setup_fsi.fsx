@@ -6,15 +6,15 @@
 
 // include files from github paket references
 #I @"../paket-files/netstandard/fsprojects/FSharp.Control.AsyncSeq/src/FSharp.Control.AsyncSeq"
-#I @"../paket-files/netstandard/fsprojects/FSharpx.Async/src/FSharpx.Async"
-#load @"Agent.fs"
-#load @"AutoCancelAgent.fs"
-#load @"AsyncSeq.fs"
-#load @"Async.fs"
 
 // include shared code
 #I @"../src/shared/core"
 #load "Prelude.fs"
+#load "String.fs"
+#load "Array.fs"
+#load "Choice.fs"
+#load "Option.fs"
+#load "Async.fs"
 #load "Logging.fs"
 
 // include project files

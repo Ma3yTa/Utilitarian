@@ -4,8 +4,35 @@
     <Compile Include="../../shared/core/Prelude.fs">
       <Link>shared/core/Prelude.fs</Link>
     </Compile>
+    <Compile Include="../../shared/core/String.fs">
+      <Link>shared/core/String.fs</Link>
+    </Compile>
+    <Compile Include="../../shared/core/Array.fs">
+      <Link>shared/core/Array.fs</Link>
+    </Compile>
+    <Compile Include="../../shared/core/Choice.fs">
+      <Link>shared/core/Choice.fs</Link>
+    </Compile>
+    <Compile Include="../../shared/core/Option.fs">
+      <Link>shared/core/Option.fs</Link>
+    </Compile>
+    <Compile Include="../../shared/core/Units.fs">
+      <Link>shared/core/Units.fs</Link>
+    </Compile>
+    <Compile Include="../../shared/core/Async.fs">
+      <Link>shared/core/Async.fs</Link>
+    </Compile>
     <Compile Include="../../shared/core/Logging.fs">
       <Link>shared/core/Logging.fs</Link>
-    </Compile>  
+    </Compile>
+    <Compile Include="../../shared/core/widgets/Interfaces.fs">
+      <Link>shared/core/widgets/Interfaces.fs</Link>
+    </Compile>
+    <Compile Include="../../shared/core/widgets/Combinators.fs">
+      <Link>shared/core/widgets/Combinators.fs</Link>
+    </Compile>
+    <Compile Include="../../shared/core/widgets/SeqFlowController.fs">
+      <Link>shared/core/widgets/SeqFlowController.fs</Link>
+    </Compile>
 </ItemGroup>
 </Project>
