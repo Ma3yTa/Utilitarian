@@ -7,7 +7,7 @@
     - [Elmish Widgets (Flowgrams)](#elmish-widgets-flowgrams)
     - [Apply *Infrastructure is Code* methodology](#apply-infrastructure-is-code-methodology)
 
-Utilitarian is an effort to bring the best things of the F# ecosystem and other promising technology to create stable, high-quality end-user software in record time.
+Utilitarian is an effort to bring the best things of the F# ecosystem together with other promising technology and sane software engineering principles to create stable, high-quality end-user software in record time.
 
 You should have some familiarity with functional modelling techniques and F# algebraic data types. [F# for Fun and Profit](https://fsharpforfunandprofit.com/) is a great resource to get started with those topics. This will really pay off for all the things you can expect to find here. 
 
@@ -26,7 +26,7 @@ The first app development model project. It serves as proof-of-concept for a new
 
 Furthermore a navigation shell showcases how navigation between pages can be implemented with widgets. Additional features like overview pages are planned to be added at some point.
 
-This app is intended to be the running sample for the [The Tale of F](#the-tale-of-f), so it will be extended this with a server aspect and by some interaction scenario with the [hidden Nintendo API](https://github.com/ZekeSnider/NintendoSwitchRESTAPI).
+This app is intended to be the running sample for the [The Tale of F](#the-tale-of-f), so it will be extended this with a server aspect and if possible some interaction scenario with the [hidden Nintendo API](https://github.com/ZekeSnider/NintendoSwitchRESTAPI).
 
 #### [@kfrie](CONTRIBUTING.md#maintainers)
 > I needed a patient zero and I really want such a filter feature myself since I am an active player and a huge fan of this game. 
@@ -35,7 +35,7 @@ This app is intended to be the running sample for the [The Tale of F](#the-tale-
 
 > I have the same feelings with the F# type system combined with powerful pattern-matching. 
 
-> So I thought, this might be a good omen and starting point to reach out for an epic journey!
+> I thought this might be a good omen and starting point to reach out for an epic journey!
 
 #### Tests
 - [ ] Module tests
@@ -53,7 +53,7 @@ This app is intended to be the running sample for the [The Tale of F](#the-tale-
 ### The Tale of F#
 The Tale of F# is a 6-part talk series covering **the whole story about developing software products** with [F#](https://www.microsoft.com/net/learn/languages/fsharp), the [SAFE](https://safe-stack.github.io/) stack and [Xamarin.Forms](https://fsprojects.github.io/Elmish.XamarinForms/guide.html).
 
-It isn't just about programming concepts and technology. It is also about exploring and creating a software development process that works really well together with a new functional, full-stack and multi-platform architecture. And it should yield proof along the way that this is more than yet another round of IT buzzword bingo.
+It is about more than just programming concepts and technology. It is also about exploring and creating a software development process that works really well together with a new functional, full-stack and multi-platform architecture. And the tale should yield proof along the way, that this is more than yet another round of IT buzzword bingo.
 
 ### Elmish Widgets (Flowgrams)
 
@@ -79,41 +79,38 @@ Widgets are best imagined as **composable static flow charts** that don't introd
 
 This allows you to express any kind of program and interaction logic only in terms of [F# data types](https://docs.microsoft.com/en-us/dotnet/fsharp/language-reference/fsharp-types). That makes it easy to reconcile them with any kind of external behaviour (e.g. button click triggers API call) in **deterministic** fashion, with full guard from the F# type system. 
 
-It is all just pure F#, there isn't even a factual dependency to Elmish, but Elmish offers a runtime model (flowtime) that can execute widgets and the widget abstraction has been derived from Elmish. 
+In no way does this prevent potential runtime (flowtime) compositions between widgets in execution, that is just a separate design space to explore (**reactive flowgramming**)
 
-Widgets provide you a mental model to turn F# data types and values into a core unit of modularization and code-sharing with **zero framework dependencies**. Widgets also bring a fractal aspect into the type system.
+Flowgramming is the principle **form follows function** or [Utilitarianism](https://en.wikipedia.org/wiki/Form_follows_function#Utilitarianism) applied in its purest form to software design and architecture. You could even say taken literally. 😉
 
-This can potentially yield an **unprecedented degree of safe code reuse for UI apps across native platforms** and the status-quo of the F# ecosystem has never been better to achieve this. It allows the F# type system to be your friendly ghost that has your back all the way into app stores, CDNs and clusters.
+The widget abstraction offers a mechanism on top of just the F# type system to do declarative [flow-based programming](https://en.wikipedia.org/wiki/Flow-based_programming), a variant of [dataflow programming](https://en.wikipedia.org/wiki/Dataflow_programming). You are highly encouraged to explore those concepts by diving into a live-coding browser session.
 
 #### Fractal Architecture
 
 There is a **fractal architecture pattern** hidden in widgets (see [`SeqFlowController`](https://github.com/kfrie/Utilitarian/blob/master/src/shared/core/widgets/SeqFlowController.fs) as PoC). 
 
-This pattern requires thinking **bottom-up** instead of thinking in top-down. Or are trees in nature growing top-down? 😉
+This pattern requires thinking **bottom-up** instead of top-down. Trees in nature are very unlikely to be observed growing top-down 😉
 
-By thinking in values stored in catalogs, composition with the pipe operator, strict file depdendency order and some peculiar powerful fractal compositions (**flow controllers**) we simply follow this pattern naturally.
+By thinking in values stored in catalogs, composition with the pipe operator, strict file depdendency order and some peculiar powerful fractal compositions (**flow controllers**) we simply align with this pattern.
 
-This way we **scale as we grow** to handle complexity, while a top-down approach would make things blown up and messy quite quick with this kind of architecture. It has probably something to do with the fact that typed F# values stored in assemblies are better in **bookkeeping of compositional complexity** than human brains are.
+This way we **scale as we grow** to handle complexity, while a top-down approach would make things blown up and messy quite quick with this kind of architectural pattern. It has probably something to do with the fact that typed F# values stored in assemblies are better in **bookkeeping of compositional complexity** than human brains are.
 
-But why not just trying to go with the flow of your enviroment and kind of **grow** your application by composing static charts that prescribe ground truths (sort of like DNA does) on process evolution that hold in **any conceivable environment**. 
+Just **grow** your application by composing static charts that prescribe ground truths (sort of like DNA does) on process evolution that will hold in **any conceivable runtime environment**. There is a right time and place for things. You can take care of technical pecularities after all your domain knowledge is already safely engrained within widgets.
 
-Natural growth just starts out with some cells and grows into something magnificient by building up layer after layer of complexity. In software, you unfortunately will almost always find the exact opposite of this to be the case.
+Natural growth starts out with some cells and grows into something magnificient by building up layer after layer of complexity. In software, you unfortunately will almost always find the exact opposite of this to be the case.
 
-Just follow your types, functions and, the project file dependency order all the way up to the target platform and straight into your product. 😊
+This can potentially lead to an **unprecedented degree of safe code reuse for UI apps across native platforms** and the status-quo of the F# ecosystem has never been better to achieve this. It allows the F# type system to be your friendly ghost that has your back all the way into app stores, CDNs and clusters.
 
 #### DDD
-The widget abstraction is an oasis for **domain-driven and typeful design** and provides a clean boundary between user interaction, technical platform pecularities like events+concurrency and, domain knowledge. 
 
-In no way does this prevent potential runtime (flowtime) compositions between widgets in execution, that is just a separate design space to explore (**reactive flowgramming**)
+Widgets provide a mental framework to turn F# data types and values into a **core unit of modularization** for inter-platform code-sharing with **zero framework dependencies**.
 
-Flowgramming is the principle **form follows function** or [Utilitarianism](https://en.wikipedia.org/wiki/Form_follows_function#Utilitarianism) applied in its purest form to software design and architecture. It is going so far to even take it literally.
+The widget abstraction is thus an oasis for **domain-driven and typeful design** and provides a clean boundary between user interaction, technical platform pecularities like events+concurrency and, domain knowledge. 
 
-The widget abstraction offers a mechanism just on top of the F# type system to do declarative [flow-based programming](https://en.wikipedia.org/wiki/Flow-based_programming), a variant of [dataflow programming](https://en.wikipedia.org/wiki/Dataflow_programming). You are highly encouraged to explore the concepts by diving into a live-coding browser session.
-
-It ist the implementation of an idea. It is to be a **friendly architectural scaffold** to give software developers freedom and independence by increasing the **efficiency level of the F# type system**. This can lead to huge aversion of business risk by massively increasing **predictability towards product**. 
-
-### Widgets + Elmish ?
+#### Widgets + Elmish ?
 Please note that the classic Elmish top-down style effectively gives you the same kind of guarantees. It will just turn out to be less brain-friendly and cumbersome after a certain composition depth.
+
+It is all just pure F#, there isn't even a factual dependency to Elmish, but Elmish offers a runtime model (flowtime) that can execute widgets and the widget abstraction has been derived from Elmish. 
 
 
 ### Apply *Infrastructure is Code* methodology
