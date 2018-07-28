@@ -1,5 +1,7 @@
 # Utilitarian
 
+[![Join the chat at https://gitter.im/utilitarian-fsharp/Lobby](https://badges.gitter.im/utilitarian-fsharp/Lobby.svg)](https://gitter.im/utilitarian-fsharp/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
   - [Apps](#apps)
     - [Mario Kart 8 Deluxe Tools](#mario-kart-8-deluxe-tools)
   - [Current WIP](#current-wip)
